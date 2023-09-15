@@ -11,6 +11,8 @@
   <body>
     <div id="app">
       <div class="nav-bar"></div>
+
+      <div class="cart">Cart({{ cart }})</div>
       
       <div class="product-display">
         <div class="product-container">
@@ -22,7 +24,7 @@
           <div class="product-info">
             <h1>{{ product }}</h1>
             <p>{{ description }}</p>
-            <a :href="urlTag">Click me</a>
+            <!-- <a :href="urlTag">Click me</a> -->
               <br>
                 <p v-if="inStock" >In Stock</p>
                 <!-- <p v-else>Out of Stock</p> -->
@@ -38,9 +40,9 @@
                         <ul>
                           <li v-for="(size, index) in sizes" :key="index">{{ size }}</li>
                         </ul>
-                        <!-- solution -->
                         <div v-for="variant in variants" :key="variant.id">{{ variant.color }}</div>
-          </div>
+                        <button class="button" v-on:click="addToCart">Add to Cart</button>
+            </div>
         </div>
       </div>
     </div>

@@ -3,10 +3,11 @@ const app = Vue.createApp({
         // creating this give us our view instance which powers our application
     data() {
         return {
+            cart:0,
             product: 'Socks',
             image: './assets/images/socks_green.jpg',
             description: 'Gloves for feet!',
-            urlTag: 'https://www.vuemastery.com/courses/',
+            // urlTag: 'https://www.vuemastery.com/courses/',
             inStock: false,
             onSale: true,
             // inventory: 100,
@@ -18,6 +19,11 @@ const app = Vue.createApp({
               { id: 2234, color: 'green' },
               { id: 2235, color: 'blue' },
             ]
+        }
+    },
+    methods: {
+        addToCart() {
+            this.cart += 1;
         }
     }
 })
