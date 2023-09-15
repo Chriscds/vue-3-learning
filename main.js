@@ -9,9 +9,15 @@ const app = Vue.createApp({
             urlTag: 'https://www.vuemastery.com/courses/',
             inStock: false,
             onSale: true,
-            // inventory: 100
-            inventory: 8
-            // inventory: 0
+            // inventory: 100,
+            inventory: 8,
+            // inventory: 0,
+            details: ['50% cotton', '30% wool', '20% polyester'],
+            sizes: ['S', 'M', 'L', 'XL'],
+            variants: [
+              { id: 2234, color: 'green' },
+              { id: 2235, color: 'blue' },
+            ]
         }
     }
 })
